@@ -29,8 +29,12 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ### To install Powerlevel10k for Oh My Zsh:
 ```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+### Tmux Plugin Manager (TPM):
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ## Installation
@@ -51,7 +55,18 @@ mkdir -p ~/.config/tmux && ln -s ~/dotfiles/tmux/tmux.conf ~/.config/tmux/tmux.c
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ```
 
-3. Source your `.zshrc` to apply the changes:
+3. Source `.zshrc`:
 ```bash
 source ~/.zshrc
+```
+
+4. Open tmux and source `tmux.conf`
+```bash
+tmux
+tmux source-file ~/.config/tmux/tmux.conf
+```
+
+5. Install tmux plguins
+```bash
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
 ```
