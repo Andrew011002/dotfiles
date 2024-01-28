@@ -22,12 +22,12 @@ sudo apt install tmux
 sudo apt install zsh
 ```
 
-### To install Oh My Zsh:
+### Oh My Zsh:
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-### To install Powerlevel10k for Oh My Zsh:
+### Powerlevel10k for Oh My Zsh:
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
@@ -70,3 +70,7 @@ tmux source-file ~/.config/tmux/tmux.conf
 ```bash
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 ```
+
+### Issues with weird keyboard behavior (macOS):
+I encountered an issue specifically on macOS where the backspace inserts spaces and keys get typed repeatedly for a single use.  
+If you enounter this issue, please follow the instructions from [this](https://stackoverflow.com/a/68456561/16825865) stackoverflow reply and it should resolve the issues.
