@@ -19,7 +19,7 @@ return {
 				numbers = {"bold"},
 				booleans = {"bold"},
 				properties = {"bold"},
-				types = {},
+				types = {"bold"},
 			},
 			highlight_overrides = {
 				mocha = function(C)
