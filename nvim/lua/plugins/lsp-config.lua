@@ -43,7 +43,7 @@ return {
 				capabilities = capabilities,
 				settings = {
 					pyright = {
-						disableLanguageServices = true,
+						disableLanguageServices = false,
 						disableOrganizeImports = true,
 					},
 					python = {
@@ -54,10 +54,11 @@ return {
                             typeCheckingMode = "standard",
 							diagnosticSeverityOverrides = {
                                 strictParameterNoneValue = "information",
-                                reportImportCycles = "information",
-                                reportInconsistentOverload = "false",
+                                reportImportCycles = "warning",
+                                reportInconsistentOverload = "information",
                                 reportPossiblyUnboundVariable = "information",
                                 reportImplicitOverride = "false",
+                                reportIndexIssue = "error",
                             }, -- specify overrides here
 						},
 					},
