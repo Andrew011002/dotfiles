@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.keymap.set("n", "<leader>L", ":Lazy <CR>", {})
 local opts = {}
 
 -- install packages
