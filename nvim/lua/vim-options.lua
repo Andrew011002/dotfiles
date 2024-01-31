@@ -15,7 +15,4 @@ vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gt", ":bnext<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gT", ":bprevious<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>w", ":bd<CR>", { noremap = true, silent = true })
-for i = 1, 9 do
-	vim.api.nvim_set_keymap("n", "g" .. i, ":buffer " .. i .. "<CR>", { noremap = true, silent = true })
-end
+vim.api.nvim_set_keymap("n", "<leader>q", ":bd<CR>", { noremap = true, silent = true })
