@@ -24,51 +24,31 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+		},
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.dockerls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.golangci_lint_ls.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.dockerls.setup({})
+			lspconfig.golangci_lint_ls.setup({})
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
-				settings = {
-					pyright = {
-						disableLanguageServices = false,
-						disableOrganizeImports = true,
-					},
-					python = {
-						analysis = {
-                            logLevel = "information",
-							autoImportCompletions = false,
-							diagnosticMode = "openFilesOnly",
-                            useLibraryCodeForTypes = "true",
-                            typeCheckingMode = "false",
-                            autoSearchPaths = "true",
-							diagnosticSeverityOverrides = {
-                                strictParameterNoneValue = "information",
-                                reportImportCycles = "warning",
-                                reportInconsistentOverload = "false",
-                                reportPossiblyUnboundVariable = "information",
-                                reportImplicitOverride = "false",
-                                reportIndexIssue = "error",
-                            }, -- specify overrides here
-						},
-					},
-				},
 			})
-			lspconfig.rust_analyzer.setup({
-				capabilities = capabilities,
-			})
+			lspconfig.rust_analyzer.setup({})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})

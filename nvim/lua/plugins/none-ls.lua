@@ -8,9 +8,6 @@ return {
                 null_ls.builtins.formatting.stylua.with({
                     filetypes = { "lua" },
                 }),
-                --null_ls.builtins.formatting.autopep8.with({
-                --  filetypes = { "python" },
-                --}),
                 null_ls.builtins.formatting.isort.with({
                     filetypes = { "python" },
                 }),
