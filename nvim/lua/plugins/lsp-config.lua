@@ -33,14 +33,15 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 		},
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.dockerls.setup({})
+			lspconfig.dockerls.setup({
+				capabilities = capabilities,
+            })
 			lspconfig.golangci_lint_ls.setup({})
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -48,7 +49,9 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.rust_analyzer.setup({})
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+            })
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
