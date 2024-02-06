@@ -49,19 +49,27 @@ return {
             lspconfig.pyright.setup({
                 capabilities = capabilities,
                 settings = {
+                    pyright = {
+                        disableLanguageServices = true,
+                        disableOrganizeImports = true,
+                    },
                     python = {
                         analysis = {
+                            logLevel = "information",
                             autoImportCompletions = false,
                             diagnosticMode = "openFilesOnly",
+                            typeCheckingMode = "standard",
                             diagnosticSeverityOverrides = {
-                                --         reportGeneralTypeIssues = "false",
+                                strictParameterNoneValue = "information",
+                                reportInconsistentOverload = "false",
+                                reportPossiblyUnboundVariable = "information",
                                 reportIncompatibleMethodOverride = "false",
                                 reportImplicitOverride = "false",
-                                reportUnknownArgumentType = "false",
-                                reportUnknownMemberType = "false",
-                                reportArgumentType = "false",
-                                reportInvalidTypeArguments = "false",
-                            },
+                                reportUnknownArgumentType = "information",
+                                reportUnknownMemberType = "information",
+                                reportArgumentType = "information",
+                                reportInvalidTypeArguments = "information",
+                            }, -- specify overrides here
                         },
                     },
                 },
