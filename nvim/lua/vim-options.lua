@@ -1,6 +1,9 @@
 -- color support
 vim.o.termguicolors = true
 
+-- longer time to press
+vim.o.timeoutlen = 1000
+
 -- formatting
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
@@ -27,6 +30,3 @@ vim.api.nvim_set_keymap("n", "gt", ":bnext<CR>", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "gT", ":bprevious<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>q", ":bd<CR>", { noremap = true, silent = true })
 
--- comments
-vim.api.nvim_set_keymap("n", "<C-/>", "gcc", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<C-/>", "<Esc>gccA", { noremap = true, silent = true })
