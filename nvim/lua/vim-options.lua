@@ -25,8 +25,10 @@ vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
 
+-- save
+vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
+
 -- pane nav
 vim.api.nvim_set_keymap("n", "gt", ":bnext<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gT", ":bprevious<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>q", ":bd<CR>", { noremap = true, silent = true })
-
