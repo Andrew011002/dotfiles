@@ -5,8 +5,10 @@ return {
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
 			ensure_installed = {
+                "astro",
 				"c",
 				"cpp",
+                "css",
 				"dockerfile",
 				"go",
 				"lua",
@@ -16,6 +18,7 @@ return {
 				"vim",
 				"vimdoc",
 				"rust",
+                "tsx",
 				"typescript",
 			},
 			sync_install = false,

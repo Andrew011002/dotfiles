@@ -11,6 +11,7 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = {
+                    "astro",
                     "clangd",
                     "dockerls",
                     "golangci_lint_ls",
