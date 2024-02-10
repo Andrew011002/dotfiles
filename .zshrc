@@ -112,3 +112,7 @@ source $ZSH/oh-my-zsh.sh
 
 # bun completions
 [ -s "/home/andrew/.bun/_bun" ] && source "/home/andrew/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
