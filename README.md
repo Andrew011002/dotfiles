@@ -43,16 +43,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ```bash
 cd ~
-git clone https://github.com/Andrew011002/dotfiles.git
+git clone https://github.com/Andrew011002/dotfiles.git && cd dotfiles
 ```
 
 2. Create symbolic links for the dotfiles:
 ```bash
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -s ~/dotfiles/nvim ~/.config/nvim
-mkdir -p ~/.config/tmux && ln -s ~/dotfiles/tmux/tmux.conf ~/.config/tmux/tmux.conf
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+chmod +x install.zsh
+./install.zsh ~/[PATH_TO]/.dotfiles # (e.g. ~/git/.dotfiles)
 ```
 
 3. Source `.zshrc`:
