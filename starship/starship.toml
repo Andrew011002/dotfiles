@@ -41,6 +41,13 @@ style = "bright-black"
 format = "[$duration]($style) "
 style = "yellow"
 
+[c]
+symbol = ' '
+
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
+symbol = ' '
+
+[rust]
+symbol = ' '
