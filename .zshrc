@@ -12,6 +12,6 @@ source $ZSH/oh-my-zsh.sh
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
