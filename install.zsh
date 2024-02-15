@@ -8,10 +8,10 @@ if [[ ! -d "$dotfiles_dir" || ! "$dotfiles_dir" =~ \.dotfiles$ ]]; then
 fi
 
 # Files to link directly in the home directory
-home_files=(.gitconfig .zshrc .p10k.zsh)
+home_files=(.gitconfig .zshrc)
 
 # Directories to link inside ~/.config
-config_dirs=(nvim tmux)
+config_dirs=(nvim tmux starship)
 
 # Ensure the ~/.config directory exists
 mkdir -p "$HOME/.config"
