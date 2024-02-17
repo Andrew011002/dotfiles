@@ -13,39 +13,49 @@ palette = "catppuccin_mocha"
 crust = "#11111b"
 mantle = "#181825"
 base = "#1e1e2e"
+red = "#f38ba8"
+lavender = "#b4befe"
+blue = "#89b4fa"
+green = "#a6e3a1"
+maroon = "#eba0ac"
+mauve = "#cba6f7"
+peach = "#fab387"
+text = "#cdd6f4"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
 surface0 = "#313244"
 surface1 = "#45475a"
 surface2 = "#585b70"
-red = "#f38ba8"
 
 [directory]
-style = "base"
+style = "text"
 
 [character]
-success_symbol = "[❯](red)"
-error_symbol = "[❯](base)"
+success_symbol = "[❯](lavender)"
+error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
 format = "[$branch]($style)"
-style = "base"
+style = "text"
 
 [git_status]
-style = "red"
-conflicted = " *"
-untracked = " *"
-modified = " *"
-staged = " *"
-ahead = ""
-behind = ""
-renamed = " *"
-deleted = " *"
-stashed = ""
-format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](218)]($style) "
+style = "text"
+conflicted = " * "
+untracked = " * "
+modified = " * "
+staged = " * "
+ahead = " "
+behind = " "
+renamed = " * "
+deleted = " * "
+stashed = " "
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](218)]($style)"
 
 [python]
 format = "[$virtualenv]($style) "
-style = "red"
+style = "base"
 
 
 
