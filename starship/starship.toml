@@ -42,16 +42,16 @@ style = "text"
 
 [git_status]
 style = "text"
-conflicted = "*"
-untracked = "*"
-modified = "*"
-staged = "*"
+conflicted = " *"
+untracked = " *"
+modified = " *"
+staged = " *"
 ahead = ""
 behind = ""
-renamed = "*"
-deleted = "*"
+renamed = " *"
+deleted = " *"
 stashed = ""
-format = "[[ ($conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
 
 [python]
 format = "[$virtualenv]($style) "
