@@ -25,7 +25,7 @@ return {
             color_overrides = {
                 mocha = {
                     base = mocha_palette.crust,
-                    mantle = mocha_palette.mantle,
+                    mantle = mocha_palette.crust,
                 },
             },
         })
