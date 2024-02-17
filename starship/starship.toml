@@ -3,7 +3,6 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$git_status\
 $python\
 $character"""
 
@@ -30,6 +29,7 @@ surface2 = "#585b70"
 
 [directory]
 style = "blue"
+format = "[$path]($style)[$read_only]($read_only_style) "
 
 [character]
 success_symbol = "[❯](red)"
@@ -37,21 +37,8 @@ error_symbol = "[❯](base)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
 style = "text"
-
-[git_status]
-format = "[[( *$conflicted$untracked$modified$staged$renamed$deleted)](text) ($ahead_behind$stashed)]($style)"
-style = "mauve"
-ahead = ""
-behind = ""
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = ""
+format = "[$branch(:$remote_branch)]($style) "
 
 [python]
 format = "[$virtualenv](surface0) "
