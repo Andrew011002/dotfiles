@@ -1,8 +1,8 @@
 format = """
 $username\
+$hostname\
 $directory\
 $git_branch\
-$git_state\
 $git_status\
 $python\
 $character"""
@@ -37,18 +37,19 @@ error_symbol = "[❯](base)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style) "
+format = "[$branch]($style)"
 style = "text"
 
 [git_status]
-style = "text"
-conflicted = "* "
-untracked = "* "
-modified = "* "
-staged = "* "
-renamed = "* "
-deleted = "* "
-format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](peach)]($style)"
+format = "[[( *$conflicted$untracked$modified$staged$renamed$deleted)](text) ($ahead_behind$stashed)]($style)"
+style = "mauve"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
 
 [python]
 format = "[$virtualenv](surface0) "
