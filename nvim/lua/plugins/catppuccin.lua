@@ -26,6 +26,7 @@ return {
 					["@keyword.return"] = { fg = mocha_palette.mauve },
 					["@keyword.function"] = { fg = mocha_palette.mauve },
 					["@keyword.operator"] = { fg = mocha_palette.mauve },
+                    ["@keyword.repeat"] = { fg = mocha_palette.mauve },
 				}
 			end,
 			styles = {
