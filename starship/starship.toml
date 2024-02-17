@@ -37,20 +37,17 @@ error_symbol = "[❯](base)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = "[$branch]($style) "
 style = "text"
 
 [git_status]
 style = "text"
-conflicted = " * "
-untracked = " * "
-modified = " * "
-staged = " * "
-ahead = " "
-behind = " "
-renamed = " * "
-deleted = " * "
-stashed = " "
+conflicted = "* "
+untracked = "* "
+modified = "* "
+staged = "* "
+renamed = "* "
+deleted = "* "
 format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](peach)]($style)"
 
 [python]
