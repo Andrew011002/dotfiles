@@ -43,6 +43,8 @@ style = "text"
 [git_status]
 format = "[[( *$conflicted$untracked$modified$staged$renamed$deleted)](text) ($ahead_behind$stashed)]($style)"
 style = "mauve"
+ahead = ""
+behind = ""
 conflicted = "​"
 untracked = "​"
 modified = "​"
