@@ -44,7 +44,7 @@ return {
 			color_overrides = {
 				mocha = {
 					base = mocha_palette.crust,
-					-- mantle = mocha_palette.crust,
+                    mauve = mocha_palette.text, -- so that alphanivm shows text
 				},
 			},
 		})
