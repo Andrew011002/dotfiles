@@ -6,7 +6,7 @@ return {
         require("catppuccin").setup({
             flavour = "mocha", -- latte, frappe, macchiato, mocha
             term_colors = true,
-            transparent_background = false,
+            transparent_background = true,
             no_italic = true,
             no_bold = false,
             custom_highlights = function()
@@ -20,7 +20,7 @@ return {
                     ["@variable.parameter"] = { fg = mocha_palette.maroon },
                     ["@punctuation.special"] = { fg = mocha_palette.overlay2 },
                     ["@operator"] = { fg = mocha_palette.overlay2 },
-                    ["@character.special"] = { fg = mocha_palette.overlay2 },
+                    ["@character.special"] = { fg = mocha_palette.yellow },
                 }
             end,
             styles = {
@@ -39,7 +39,7 @@ return {
             color_overrides = {
                 mocha = {
                     base = mocha_palette.crust,
-                    mantle = mocha_palette.crust,
+                    -- mantle = mocha_palette.crust,
                 },
             },
         })
