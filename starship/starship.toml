@@ -51,7 +51,7 @@ modified = "​"
 staged = "​"
 renamed = "​"
 deleted = "​"
-stashed = "≡"
+stashed = ""
 
 [python]
 format = "[$virtualenv](surface0) "
