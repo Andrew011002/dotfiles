@@ -9,6 +9,20 @@ return {
             transparent_background = false,
             no_italic = true,
             no_bold = false,
+            custom_highlights = function()
+                return {
+                    ["@function.method"] = { fg = mocha_palette.blue },
+                    ["@comment"] = { fg = mocha_palette.base },
+                    ["@constructor"] = { fg = mocha_palette.blue },
+                    ["@attribute"] = { fg = mocha_palette.blue },
+                    ["@variable.builtin"] = { fg = mocha_palette.yellow },
+                    ["@variable"] = { fg = mocha_palette.text },
+                    ["@variable.parameter"] = { fg = mocha_palette.maroon },
+                    ["@punctuation.special"] = { fg = mocha_palette.overlay2 },
+                    ["@operator"] = { fg = mocha_palette.overlay2 },
+                    ["@character.special"] = { fg = mocha_palette.overlay2 },
+                }
+            end,
             styles = {
                 comments = {},
                 conditionals = {},
