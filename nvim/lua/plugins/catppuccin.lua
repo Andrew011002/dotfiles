@@ -22,11 +22,13 @@ return {
 					["@operator"] = { fg = mocha_palette.overlay2 },
 					["@character.special"] = { fg = mocha_palette.yellow },
 					["@keyword"] = { fg = mocha_palette.mauve },
+					["@keyword.exception"] = { fg = mocha_palette.mauve },
+					["@keyword.storage"] = { fg = mocha_palette.mauve },
 					["@keyword.import"] = { fg = mocha_palette.mauve },
 					["@keyword.return"] = { fg = mocha_palette.mauve },
 					["@keyword.function"] = { fg = mocha_palette.mauve },
 					["@keyword.operator"] = { fg = mocha_palette.mauve },
-                    ["@keyword.repeat"] = { fg = mocha_palette.mauve },
+					["@keyword.repeat"] = { fg = mocha_palette.mauve },
 				}
 			end,
 			styles = {
@@ -45,7 +47,7 @@ return {
 			color_overrides = {
 				mocha = {
 					base = mocha_palette.crust,
-                    mauve = mocha_palette.text, -- so that alphanivm shows text
+					mauve = mocha_palette.text, -- so that alphanivm shows text
 				},
 			},
 		})
