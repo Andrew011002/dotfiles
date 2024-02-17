@@ -29,11 +29,11 @@ surface1 = "#45475a"
 surface2 = "#585b70"
 
 [directory]
-style = "text"
+style = "blue"
 
 [character]
-success_symbol = "[❯](lavender)"
-error_symbol = "[❯](red)"
+success_symbol = "[❯](red)"
+error_symbol = "[❯](base)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
@@ -42,20 +42,19 @@ style = "text"
 
 [git_status]
 style = "text"
-conflicted = " *"
-untracked = " *"
-modified = " *"
-staged = " *"
+conflicted = " * "
+untracked = " * "
+modified = " * "
+staged = " * "
 ahead = ""
 behind = ""
-renamed = " *"
-deleted = " *"
+renamed = " * "
+deleted = " * "
 stashed = ""
-format = "[[($conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](peach)($ahead_behind$stashed)]($style)"
 
 [python]
-format = "[$virtualenv]($style) "
-style = "base"
+format = "[$virtualenv](surface0) "
 
 
 
