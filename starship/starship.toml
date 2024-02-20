@@ -1,6 +1,7 @@
 format = """
 $directory\
 $git_branch\
+$git_status\
 $python\
 $character"""
 
@@ -37,6 +38,18 @@ vimcmd_symbol = "[❮](green)"
 [git_branch]
 style = "text"
 format = "[$branch(:$remote_branch)]($style) "
+
+[git_status]
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](red)($ahead_behind$stashed)]($style)"
+ahead = "> "
+behind = "< "
+conflicted = ">< "
+untracked = "? "
+modified = "! "
+staged = "+ "
+renamed = ">>"
+deleted = "X"
+stashed = "≡"
 
 [python]
 format = "[$virtualenv](surface0) "

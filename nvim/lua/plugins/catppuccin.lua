@@ -12,7 +12,7 @@ return {
             custom_highlights = function()
                 return {
                     ["@function.method"] = { fg = mocha_palette.blue },
-                    ["@comment"] = { fg = mocha_palette.base },
+                    ["@comment"] = { fg = mocha_palette.surface1 },
                     ["@constructor"] = { fg = mocha_palette.blue },
                     ["@attribute"] = { fg = mocha_palette.blue },
                     ["@variable.builtin"] = { fg = mocha_palette.yellow },
