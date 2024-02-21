@@ -3,6 +3,7 @@ $directory\
 $git_branch\
 $git_status\
 $python\
+$line_break\
 $character"""
 
 palette = "catppuccin_mocha"
