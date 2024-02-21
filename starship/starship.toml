@@ -47,9 +47,9 @@ conflicted = ">< "
 untracked = "? "
 modified = "! "
 staged = "+ "
-renamed = ">>"
-deleted = "X"
-stashed = "≡"
+renamed = ">> "
+deleted = "X "
+stashed = "≡ "
 
 [python]
 format = "[$virtualenv](surface0)"
