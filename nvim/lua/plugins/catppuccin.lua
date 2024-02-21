@@ -17,7 +17,6 @@ return {
                     ["@attribute"] = { fg = mocha_palette.blue },
                     ["@variable"] = { fg = mocha_palette.text },
                     ["@variable.builtin"] = { fg = mocha_palette.yellow },
-                    ["@variable.c.builtin"] = { fg = mocha_palette.mauve},
                     ["@variable.parameter"] = { fg = mocha_palette.maroon },
                     ["@punctuation.special"] = { fg = mocha_palette.overlay2 },
                     ["@operator"] = { fg = mocha_palette.overlay2 },
@@ -31,6 +30,7 @@ return {
                     ["@keyword.operator"] = { fg = mocha_palette.mauve },
                     ["@keyword.repeat"] = { fg = mocha_palette.mauve },
                     ["@keyword.conditional"] = { fg = mocha_palette.mauve },
+                    ["@type.qualifier"] = { fg = mocha_palette.mauve},
                 }
             end,
             styles = {
