@@ -7,8 +7,8 @@ if [[ ! -d "$dotfiles_dir" || ! "$dotfiles_dir" =~ \.dotfiles$ ]]; then
   exit 1
 fi
 
-# Files to link directly in the home directory
-home_files=(.gitconfig .zshrc)
+# Files and directories to link directly in the home directory
+home_files=(.gitconfig .zshrc .warp)
 
 # Directories to link inside ~/.config
 config_dirs=(nvim tmux starship)
@@ -16,7 +16,7 @@ config_dirs=(nvim tmux starship)
 # Ensure the ~/.config directory exists
 mkdir -p "$HOME/.config"
 
-# Function to link files to the home directory
+# Function to link files and directories to the home directory
 link_to_home() {
   for item in "${home_files[@]}"; do
     local target="$HOME/$item"
