@@ -70,8 +70,6 @@ link_warp() {
 
   if [[ "$(uname)" == "Linux" ]]; then
     local target="${XDG_DATA_HOME:-$HOME/.local/share}/warp-terminal"
-    mkdir -p "$target"
-    target+="/.warp"  # Target file within the directory
   elif [[ "$(uname)" == "Darwin" ]]; then
     local target="$HOME/.warp"
   else
