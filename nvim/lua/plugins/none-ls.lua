@@ -11,12 +11,6 @@ return {
                 null_ls.builtins.formatting.black.with({
                     filetypes = { "python" },
                 }),
-                null_ls.builtins.diagnostics.eslint.with({
-                    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-                }),
-                null_ls.builtins.diagnostics.ruff.with({
-                    filetypes = { "python" },
-                }),
                 null_ls.builtins.completion.luasnip,
                 null_ls.builtins.completion.spell,
             },
