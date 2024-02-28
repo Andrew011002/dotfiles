@@ -51,6 +51,16 @@ return {
 			})
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
+				settings = {
+					python = {
+						analysis = {
+							autoImportCompletions = false,
+							reportIncompatibleMethodOverride = false,
+							reportImplicitOverride = false,
+							reportImportCyles = "information",
+						},
+					},
+				},
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
