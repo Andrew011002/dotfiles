@@ -32,6 +32,7 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "n", "nzz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "N", "Nzz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>lb", ":ls<CR>", { noremap = true, silent = true })
 
 -- save
 vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
@@ -40,4 +41,3 @@ vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "gt", ":bnext<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gT", ":bprevious<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>q", ":bd<CR>", { noremap = true, silent = true })
-
