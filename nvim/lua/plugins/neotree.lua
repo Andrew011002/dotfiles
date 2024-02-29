@@ -4,6 +4,5 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" },
 	config = function()
 		vim.keymap.set("n", "<leader>n", ":Neotree toggle left <CR>", {})
-		vim.keymap.set("n", "<leader><ESC>", ":Neotree close left <CR>", {})
 	end,
 }
