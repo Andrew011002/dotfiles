@@ -65,13 +65,13 @@ return {
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>dj",
+				"<C-j>",
 				"<cmd>lua vim.diagnostic.goto_next()<CR>",
 				{ noremap = true, silent = true }
 			)
 			vim.api.nvim_set_keymap(
 				"n",
-				"<leader>dk",
+				"<C-k>",
 				"<cmd>lua vim.diagnostic.goto_prev()<CR>",
 				{ noremap = true, silent = true }
 			)
