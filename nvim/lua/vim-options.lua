@@ -33,7 +33,9 @@ vim.api.nvim_set_keymap("n", "<leader>q!", ":qa!<CR>", { noremap = true, silent 
 
 -- vim clipboard
 vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true, silent = true })
 
 -- buffer nav
 vim.api.nvim_set_keymap("n", "<C-b>", "<C-b>zz", { noremap = true, silent = true })
