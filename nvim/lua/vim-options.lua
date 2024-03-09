@@ -31,6 +31,11 @@ vim.api.nvim_set_keymap("n", "<leader>qq", ":q<CR>", { noremap = true, silent = 
 vim.api.nvim_set_keymap("n", "<leader>qa", ":qa<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>q!", ":qa!<CR>", { noremap = true, silent = true })
 
+-- save
+vim.api.nvim_set_keymap("n", "<leader>ww", ":w<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>w!", ":w!<CR>", { noremap = true, silent = true })
+
 -- vim clipboard
 vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
@@ -44,10 +49,6 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "n", "nzz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "N", "Nzz", { noremap = true, silent = true })
-
--- save
-vim.api.nvim_set_keymap("n", "<leader>ww", ":w<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
 
 -- pane nav
 vim.api.nvim_set_keymap("n", "gt", ":bnext<CR>", { noremap = true, silent = true })
