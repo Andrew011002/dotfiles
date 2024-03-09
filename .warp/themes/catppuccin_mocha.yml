@@ -2,17 +2,6 @@ background: '#11111b'
 accent: '#f5e0dc'
 foreground: '#cdd6f4'
 details: darker
-
-
-############################################################### SEE BELOW
-background_image:
-  # the path is relative to ~/.warp/themes/
-  # the full path to the picture is: ~/.warp/themes/warp.jpg
-  path: bladerunner.jpg
-  # the opacity value is required and can range from 0-100
-  opacity: 3
-############################################################### SEE ABOVE
-
 terminal_colors:
   normal:
     black: '#45475a'
