@@ -1,4 +1,6 @@
-return {"nvim-treesitter/nvim-treesitter",
+return {
+    "nvim-treesitter/nvim-treesitter",
+    build = "<cmd>TSUpdate",
     config = function()
         ensure_installed = {
             "c",
@@ -14,5 +16,6 @@ return {"nvim-treesitter/nvim-treesitter",
         }
         highlight = {enable = true}
         indent = { enable = true}
+        auto_install = true
     end,
 }
