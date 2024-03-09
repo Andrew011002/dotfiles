@@ -13,43 +13,49 @@ vim.cmd("set shiftwidth=4")
 -- bindings
 
 -- tabbing
-vim.api.nvim_set_keymap("i", "<S-Tab>", "<C-d>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Tab>", ">>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-Tab>", "<<", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<Tab>", ">gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true })
+vim.keymap.set("i", "<S-Tab>", "<C-d>")
+vim.keymap.set("n", "<Tab>", ">>")
+vim.keymap.set("n", "<S-Tab>", "<<")
+vim.keymap.set("v", "<Tab>", ">gv")
+vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- window nav
-vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
 
 -- quit window
-vim.api.nvim_set_keymap("n", "<leader>qw", ":bd<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>qq", ":q<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>qa", ":qa<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>q!", ":qa!<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>qw", "<cmd>bd<CR>")
+vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
+vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
+vim.keymap.set("n", "<leader>q!", "<cmd>qa!<CR>")
 
 -- save
-vim.api.nvim_set_keymap("n", "<leader>ww", ":w<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>w!", ":w!<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
+vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
 
 -- vim clipboard
-vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>p", '"+p', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>p", '"+p')
+vim.keymap.set("v", "<leader>p", '"+p')
 
 -- buffer nav
-vim.api.nvim_set_keymap("n", "<C-b>", "<C-b>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-f>", "<C-f>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "n", "nzz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "N", "Nzz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-b>", "<C-b>zz")
+vim.keymap.set("n", "<C-f>", "<C-f>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
 
 -- pane nav
-vim.api.nvim_set_keymap("n", "gt", ":bnext<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "gT", ":bprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "gt", "<cmd>bnext<CR>")
+vim.keymap.set("n", "gT", "<cmd>bprevious<CR>")
+
+-- enforce the learning curve!
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
