@@ -1,4 +1,4 @@
-background: '#11111b'
+background: '#1e1e2e'
 accent: '#f5e0dc'
 foreground: '#cdd6f4'
 details: darker
@@ -21,3 +21,4 @@ terminal_colors:
     magenta: '#f5c2e7'
     cyan: '#94e2d5'
     white: '#a6adc8'
+
