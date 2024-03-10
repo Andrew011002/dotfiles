@@ -1,5 +1,5 @@
 return {
-        "neovim/nvim-lspconfig",
+        {"neovim/nvim-lspconfig",
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
@@ -9,36 +9,52 @@ return {
 			require("mason").setup({})
 			vim.keymap.set("n", "<leader>M", ":Mason <CR>", {})
 
-            require("mason-tool-installer").setup({
-                ensure_installed = {
-                    "clangd", 
-                    "cssls", 
-                    "gopls",
-                    "html",
-                    "htmx",
-                    "lua_ls",
-                    "pyright",
-                },
-                auto_update = true,
-            })
-
-            local lspconfig = require('lspconfig')
             local builtin =  require("telescope.builtin")
 
             vim.api.nvim_create_autocmd('LspAttach', {
               group = vim.api.nvim_create_augroup('LspBootUp', {clear = true}),
               callback = function(event)
                 vim.bo[event.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-                local opts = { buffer = event.buf }
-            
-                vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, {opts, desc = "[G]oto [D]efinition"})
-                vim.keymap.set("n", "gr", builtin.lsp_references, {opts, desc = "[G]oto [R]eferences"})
-                vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, {opts, desc = "[D]ocument [S]ymbols"})
-                vim.keymap.set("n", "<leader>ws", builtin.lsp_dynamic_workspace_symbols, {opts, desc = "[W]ork [S]pace Symbols"})
-                vim.keymap.set("n", "<leader>gI", builtin.lsp_implementations, {opts, desc = "[G]oto Implementations"})
+
+                vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = event.buf, desc = "[G]oto [D]ecleration"})
               end,
             })
 
---            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		end,
+    },
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "saadparwaiz1/cmp_luasnip",
+            "L3MON4D3/LuaSnip"
+        },
+        config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            local servers = { clangd = {}, 
+                                cssls = {}, 
+                                gopls = {}, 
+                                html = {}, 
+                                htmx = {}, 
+                                lua_ls = {}, 
+                                pyright = {}, 
+                                stylua = {}, 
+                            }
+            local ensure_installed = vim.tbl_keys(servers or {})
+            require('mason-tool-installer').setup { 
+                                    ensure_installed = ensure_installed,
+                                    auto_update = true
+            }
+            local lspconfig = require('lspconfig')
+            require('mason-lspconfig').setup {
+                    handlers = {
+                      function(server_name)
+                        local server = servers[server_name] or {}
+                        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+                        lspconfig[server_name].setup(server)
+                      end,
+                    },
+                  }
+        end,
+    }
 }
