@@ -22,6 +22,9 @@ return {
                 vim.keymap.set("n", "gI", builtin.lsp_implementations, { buffer = event.buf, desc = "[G]oto [I]mplementations"})
                 vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, { buffer = event.buf, desc = "[D]ocument [S]ymbols"})
                 vim.keymap.set("n", "<leader>ws", builtin.lsp_workspace_symbols, { buffer = event.buf, desc = "[W]orkspace [S]ymbols"})
+                vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = event.buf, desc = "[R]e[N]ame"})
+                vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = event.buf, desc = "[C]ode [A]ctions"})
+                vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, { buffer = event.buf, desc = "Hover"})
               end,
             })
 
