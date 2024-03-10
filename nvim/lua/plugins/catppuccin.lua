@@ -3,9 +3,9 @@ return { "catppuccin/nvim",
         config = function()
             require("catppuccin").setup({
                 flavour = "macchiato",
-                no_italic = false, 
-                no_bold = false, 
-                no_underline = false, 
+                no_italic = true, 
+                no_bold = true, 
+                no_underline = true, 
             })
             vim.cmd.colorscheme "catppuccin"
         end,
