@@ -11,6 +11,11 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 -- bindings
+vim.opt.number = true
+vim.opt.undofile = true
+vim.opt.hlsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.opt.clipboard = "unnamedplus"
 
 -- tabbing
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
@@ -35,12 +40,6 @@ vim.keymap.set("n", "<leader>q!", "<cmd>qa!<CR>")
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
 vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
-
--- vim clipboard
-vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("v", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>p", '"+p')
-vim.keymap.set("v", "<leader>p", '"+p')
 
 -- buffer nav
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
