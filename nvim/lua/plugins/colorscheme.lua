@@ -8,6 +8,6 @@ return {
 			no_bold = true,
 			no_underline = true,
 		})
-		vim.cmd.colorscheme("catppuccin")
+		-- vim.cmd.colorscheme("catppuccin")
 	end,
 }
