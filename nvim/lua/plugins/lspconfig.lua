@@ -156,4 +156,20 @@ return {
 			})
 		end,
 	},
+	{ -- Autopairs
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	},
+	{ -- Comment
+		"terrortylor/nvim-comment",
+		config = function()
+			require("nvim_comment").setup({
+				operator_mapping = "gc",
+				line_mapping = "gcc",
+			})
+		end,
+	},
 }
