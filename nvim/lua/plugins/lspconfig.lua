@@ -70,7 +70,19 @@ return {
 				html = {},
 				htmx = {},
 				lua_ls = {},
-				pyright = {},
+				pyright = {
+					settings = {
+						python = {
+							analysis = {
+								autoImportCompletions = false,
+								diagnosticSeverityOverrides = {
+									reportImportCycles = "warning",
+									reportIncompatibleMethodOverride = false,
+								},
+							},
+						},
+					},
+				},
 				stylua = {},
 			}
 

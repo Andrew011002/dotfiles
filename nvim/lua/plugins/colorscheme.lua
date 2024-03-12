@@ -12,12 +12,4 @@ return {
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
-	-- {
-	-- 	"sontungexpt/witch",
-	-- 	priority = 0,
-	-- 	lazy = false,
-	-- 	config = function(_, opts)
-	-- 		require("witch").setup(opts)
-	-- 	end,
-	-- },
 }
