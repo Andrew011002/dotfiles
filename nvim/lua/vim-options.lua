@@ -11,6 +11,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 -- bindings
+vim.wo.relativenumber = true
 vim.opt.number = true
 vim.opt.undofile = true
 vim.opt.hlsearch = true
