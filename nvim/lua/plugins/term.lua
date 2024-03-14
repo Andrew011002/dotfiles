@@ -5,13 +5,11 @@ return {
 		fterm.setup({
 			border = "double",
 			dimensions = {
-				height = 0.9,
-				width = 0.9,
+				height = 0.5,
+				width = 0.5,
 			},
 		})
-		vim.keymap.set("n", "<leader>to", fterm.open, {})
-		vim.keymap.set("n", "<leader>tc", fterm.close, {})
-		vim.keymap.set("n", "<leader>tt", fterm.toggle, {})
-		vim.keymap.set("n", "<leader>te", fterm.exit, {})
+		vim.keymap.set({ "t", "n" }, "<C-a>", fterm.toggle, {})
+		vim.keymap.set("t", "<C-c>", fterm.exit, {})
 	end,
 }
