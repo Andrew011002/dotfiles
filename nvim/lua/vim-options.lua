@@ -18,6 +18,9 @@ vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.clipboard = "unnamedplus"
 
+-- explore
+vim.keymap.set("n", "<leader>x", "<cmd>Explore<CR>")
+
 -- tabbing
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
 vim.keymap.set("n", "<Tab>", ">>")
@@ -42,7 +45,7 @@ vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
 vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
 
--- buffer nav
+-- current buffer nav
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
 vim.keymap.set("n", "<C-f>", "<C-f>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
