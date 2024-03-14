@@ -11,12 +11,23 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 -- bindings
+
+-- line numbering
 vim.wo.relativenumber = true
 vim.opt.number = true
+
+-- file changes history saves after quit
 vim.opt.undofile = true
+
+-- after search escape clears search
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- system clip linked w/ vim clip
 vim.opt.clipboard = "unnamedplus"
+
+-- list buffers
+vim.keymap.set("n", "<leader>bl", "<cmd>buffers<CR>")
 
 -- explore
 vim.keymap.set("n", "<leader>x", "<cmd>Explore<CR>")
