@@ -53,7 +53,7 @@ deleted = "X "
 stashed = "≡ "
 
 [python]
-format = "[$virtualenv](surface0)"
+format = "[$virtualenv](surface2)"
 
 
 
