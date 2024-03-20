@@ -46,15 +46,10 @@ vim.keymap.set("n", "<leader>k", "<C-w>k")
 vim.keymap.set("n", "<leader>l", "<C-w>l")
 
 -- quit window
-vim.keymap.set("n", "<leader>qw", "<cmd>bd<CR>")
-vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
-vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
-vim.keymap.set("n", "<leader>q!", "<cmd>qa!<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>bd<CR>")
 
 -- save
-vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
-vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 
 -- current buffer nav
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
