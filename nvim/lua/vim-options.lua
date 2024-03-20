@@ -63,6 +63,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
+vim.keymap.set("n", "gh", "_")
+vim.keymap.set("n", "gl", "$")
 
 -- pane nav
 vim.keymap.set("n", "gt", "<cmd>bnext<CR>")
