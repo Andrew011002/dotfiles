@@ -9,7 +9,6 @@ return {
 		config = function()
 			require("mason").setup({})
 			vim.keymap.set("n", "<leader>M", ":Mason <CR>", {})
-
 			local builtin = require("telescope.builtin")
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("LspBootUp", { clear = true }),
@@ -130,15 +129,26 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"saadparwaiz1/cmp_luasnip",
 			"L3MON4D3/LuaSnip",
+			"onsails/lspkind.nvim",
 		},
 		config = function()
 			local luasnip = require("luasnip")
 			local cmp = require("cmp")
+			local lspkind = require("lspkind")
 			cmp.setup({
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
 					end,
+				},
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						maxwidth = 50,
+						ellipsis_char = "...",
+						show_labelDetails = true,
+						symbol_map = { Codeium = "" },
+					}),
 				},
 				window = {
 					completion = cmp.config.window.bordered(),

@@ -26,10 +26,8 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- system clip linked w/ vim clip
 vim.opt.clipboard = "unnamedplus"
 
--- list buffers
+-- list buffers & directories
 vim.keymap.set("n", "<leader>bl", "<cmd>buffers<CR>")
-
--- explore
 vim.keymap.set("n", "<leader>x", "<cmd>Explore<CR>")
 
 -- tabbing
@@ -39,19 +37,13 @@ vim.keymap.set("n", "<S-Tab>", "<<")
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 
--- window nav
-vim.keymap.set("n", "<leader>h", "<C-w>h")
-vim.keymap.set("n", "<leader>j", "<C-w>j")
-vim.keymap.set("n", "<leader>k", "<C-w>k")
-vim.keymap.set("n", "<leader>l", "<C-w>l")
-
--- quit window
+-- -- quit window
 vim.keymap.set("n", "<leader>qw", "<cmd>bd<CR>")
 vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
 vim.keymap.set("n", "<leader>q!", "<cmd>qa!<CR>")
-
--- save
+--
+-- -- save
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
 vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
@@ -63,8 +55,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
-vim.keymap.set("n", "gh", "_")
-vim.keymap.set("n", "gl", "$")
+vim.keymap.set("n", "}", "}zz")
+vim.keymap.set("n", "{", "{zz")
 
 -- pane nav
 vim.keymap.set("n", "gt", "<cmd>bnext<CR>")
