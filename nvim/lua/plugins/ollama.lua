@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("gen").setup({
 			model = "mixtral",
-			display_mode = "float",
+			display_mode = "none",
 			show_prompt = false,
 			show_model = true,
 			quit_map = "q",

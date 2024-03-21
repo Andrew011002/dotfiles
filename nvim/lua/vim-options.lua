@@ -37,13 +37,13 @@ vim.keymap.set("n", "<S-Tab>", "<<")
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 
--- -- quit window
+-- quit window
 vim.keymap.set("n", "<leader>qw", "<cmd>bd<CR>")
 vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
 vim.keymap.set("n", "<leader>q!", "<cmd>qa!<CR>")
---
--- -- save
+
+-- save
 vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
 vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
