@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repository contains my personal dotfiles for setting up my development environment, which includes configurations for Neovim, Tmux, Zsh with Oh My Zsh, Powerlevel10k, and Git.
+This repository contains my personal dotfiles for setting up my development environment, which includes configurations for Neovim, Tmux, Zsh with Starship, and Git.
 
 ## Dependencies
 
@@ -9,27 +9,19 @@ Before installing the dotfiles, ensure the following dependencies are installed 
 ### On macOS (using Brew):
 
 ```
+brew install zsh
 brew install neovim
 brew install tmux
-brew install zsh
+brew install starship  
 ```
 
 ### On Ubuntu (using apt):
 ```bash
 sudo apt update
+sudo apt install zsh
 sudo apt install neovim
 sudo apt install tmux
-sudo apt install zsh
-```
-
-### Oh My Zsh:
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-### Powerlevel10k for Oh My Zsh:
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sudo curl -sS https://starship.rs/install.sh | sh
 ```
 
 ### Tmux Plugin Manager (TPM):
