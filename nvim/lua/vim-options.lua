@@ -28,7 +28,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- list buffers & directories
 vim.keymap.set("n", "<leader>ls", "<cmd>buffers<CR>")
-vim.keymap.set("n", "<leader>ex", "<cmd>Explore<CR>")
+vim.keymap.set("n", "<leader>dr", "<cmd>[D]i[R]ectories<CR>")
 
 -- tabbing
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
