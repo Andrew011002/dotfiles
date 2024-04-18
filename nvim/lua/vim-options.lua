@@ -38,7 +38,7 @@ vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- quit window
-vim.keymap.set("n", "<leader>w", "<cmd>bd<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>bd<CR>")
 
 -- current buffer nav
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
@@ -62,4 +62,4 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>qf", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uick[F]ix list" })
+vim.keymap.set("n", "<leader>fx", vim.diagnostic.setloclist, { desc = "Open diagnostic Quick[F]i[X] list" })
