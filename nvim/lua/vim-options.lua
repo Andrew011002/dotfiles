@@ -28,7 +28,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- list buffers & directories
 vim.keymap.set("n", "<leader>ls", "<cmd>buffers<CR>")
-vim.keymap.set("n", "<leader>x", "<cmd>Explore<CR>")
+vim.keymap.set("n", "<leader>ex", "<cmd>Explore<CR>")
 
 -- tabbing
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
@@ -38,15 +38,7 @@ vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- quit window
-vim.keymap.set("n", "<leader>qw", "<cmd>bd<CR>")
--- vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
--- vim.keymap.set("n", "<leader>qa", "<cmd>qa<CR>")
--- vim.keymap.set("n", "<leader>q!", "<cmd>qa!<CR>")
---
--- -- save
--- vim.keymap.set("n", "<leader>ww", "<cmd>w<CR>")
--- vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>")
--- vim.keymap.set("n", "<leader>w!", "<cmd>w!<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>bd<CR>")
 
 -- current buffer nav
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
