@@ -109,9 +109,14 @@ return {
 		"stevearc/conform.nvim",
 		config = function()
 			require("conform").setup({
-				notify_on_error = false,
+				formatters = {
+					black = {
+						prepend_args = { "--fast" },
+					},
+				},
+				notify_on_error = true,
 				format_on_save = {
-					timeout_ms = 250,
+					timeout_ms = 500,
 					lsp_fallback = true,
 				},
 				formatters_by_ft = {
