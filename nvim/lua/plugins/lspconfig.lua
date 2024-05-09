@@ -123,7 +123,7 @@ return {
 		end,
 	},
 
-	{ -- Autocomple
+	{ -- Autocomplete
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
@@ -135,12 +135,14 @@ return {
 			local luasnip = require("luasnip")
 			local cmp = require("cmp")
 			local lspkind = require("lspkind")
+
 			cmp.setup({
 				snippet = {
 					expand = function(args)
 						luasnip.lsp_expand(args.body)
 					end,
 				},
+
 				formatting = {
 					format = lspkind.cmp_format({
 						mode = "symbol",
@@ -209,9 +211,6 @@ return {
 	{ -- Autopairs
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
 	},
 	{ -- Comment
 		"terrortylor/nvim-comment",
