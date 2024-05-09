@@ -11,7 +11,7 @@ fi
 home_files=(.gitconfig .zshrc)
 
 # Directories to link inside ~/.config
-config_dirs=(nvim tmux starship)
+config_dirs=(nvim starship)
 
 # Ensure the ~/.config directory exists
 mkdir -p "$HOME/.config"
