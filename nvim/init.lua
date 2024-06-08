@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-vim.keymap.set("n", "<leader>L", ":Lazy <CR>", {})
+vim.keymap.set("n", "<leader>L", ":Lazy <CR>", { desc = "Load [L]azy" })
 local opts = {}
 
 -- copy paste for WSL
