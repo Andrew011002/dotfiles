@@ -35,7 +35,7 @@ return {
 					)
 					vim.keymap.set(
 						"n",
-						"gI",
+						"gi",
 						builtin.lsp_implementations,
 						{ buffer = event.buf, desc = "[G]oto [I]mplementations" }
 					)
@@ -76,7 +76,6 @@ return {
 								autoImportCompletions = false,
 								diagnosticSeverityOverrides = {
 									reportImportCycles = "warning",
-									reportIncompatibleMethodOverride = false,
 								},
 							},
 						},
@@ -150,6 +149,7 @@ return {
 						ellipsis_char = "...",
 						show_labelDetails = true,
 						symbol_map = {
+							-- vscode symbols
 							Text = "󰀬",
 							Method = "󰆧",
 							Function = "󰆧",
