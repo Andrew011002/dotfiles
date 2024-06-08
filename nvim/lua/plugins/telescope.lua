@@ -11,13 +11,13 @@ return {
 			},
 		})
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-		vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-		vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-		vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
-		vim.keymap.set("n", "<leader>km", builtin.keymaps, {})
-		vim.keymap.set("n", "<leader>cs", builtin.colorscheme, {})
+		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[F]ind Files" })
+		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live [G]rep" })
+		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind [B]uffers" })
+		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[F]ind [H]elp tags" })
+		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "[F]ind [D]iagnostics" })
+		vim.keymap.set("n", "<leader>km", builtin.keymaps, { desc = "Find [K]ey [M]aps" })
+		vim.keymap.set("n", "<leader>cs", builtin.colorscheme, { desc = "Find [C]olor [S]chemes" })
 		require("telescope").load_extension("ui-select")
 	end,
 }
