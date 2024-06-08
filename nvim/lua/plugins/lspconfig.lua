@@ -8,7 +8,7 @@ return {
 		},
 		config = function()
 			require("mason").setup({})
-			vim.keymap.set("n", "<leader>M", ":Mason <CR>", {})
+			vim.keymap.set("n", "<leader>M", ":Mason <CR>", { desc = "Load [M]ason" })
 			local builtin = require("telescope.builtin")
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("LspBootUp", { clear = true }),
