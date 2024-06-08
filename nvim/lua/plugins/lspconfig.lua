@@ -58,7 +58,7 @@ return {
 						vim.lsp.buf.code_action,
 						{ buffer = event.buf, desc = "[C]ode [A]ctions" }
 					)
-					vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, { buffer = event.buf, desc = "Hover" })
+					vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, { buffer = event.buf, desc = "[H]over" })
 				end,
 			})
 
