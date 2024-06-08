@@ -26,10 +26,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- system clip linked w/ vim clip
 vim.opt.clipboard = "unnamedplus"
 
--- list buffers & directories
-vim.keymap.set("n", "<leader>ls", "<cmd>buffers<CR>")
-vim.keymap.set("n", "<leader>dr", "<cmd>[D]i[R]ectories<CR>")
-
 -- tabbing
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
 vim.keymap.set("n", "<Tab>", ">>")
@@ -59,7 +55,7 @@ vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- diagnostics
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+vim.keymap.set("n", "g[", vim.diagnostic.goto_prev, { desc = "Go to previous Diagnostic message" })
+vim.keymap.set("n", "g]", vim.diagnostic.goto_next, { desc = "Go to next Diagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>fx", vim.diagnostic.setloclist, { desc = "Open diagnostic Quick[F]i[X] list" })
+vim.keymap.set("n", "<leader>qf", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uick[F]ix list" })
