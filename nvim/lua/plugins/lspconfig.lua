@@ -109,13 +109,12 @@ return {
 		config = function()
 			require("conform").setup({
 				formatters_by_ft = {
-					go = { "gofmt" },
-					-- lua = { "stylua" },
+					lua = { "stylua" },
 					python = { "black" },
 				},
 				format_on_save = {
-					timeout_ms = 250,
-					lsp_fallback = true,
+					timeout_ms = 500,
+					lsp_format = "fallback",
 				},
 			})
 		end,
