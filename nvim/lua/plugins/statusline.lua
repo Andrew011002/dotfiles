@@ -15,7 +15,6 @@ return {
 				"git-diff",
 				"%=",
 				"diagnostics",
-				"lsps-formatters",
 				"indent",
 				"encoding",
 				"pos-cursor",
