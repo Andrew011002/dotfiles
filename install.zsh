@@ -2,6 +2,9 @@
 
 dotfiles_path="$1"
 
+rm -rf ~/.config/nvim
+rm -rf ~/.config/starship
+
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/starship
 
