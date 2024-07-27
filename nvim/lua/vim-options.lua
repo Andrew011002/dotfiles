@@ -35,6 +35,7 @@ vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- quit window
 vim.keymap.set("n", "<leader>q", "<cmd>bd<CR>")
+vim.keymap.set("n", "<leader>Q", "<cmd>bd!<CR>")
 
 -- current buffer nav
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
