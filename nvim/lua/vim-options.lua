@@ -57,5 +57,5 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 -- diagnostics
 vim.keymap.set("n", "g[", vim.diagnostic.goto_prev, { desc = "Go to previous Diagnostic message" })
 vim.keymap.set("n", "g]", vim.diagnostic.goto_next, { desc = "Go to next Diagnostic message" })
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
+vim.keymap.set("n", "gh", vim.diagnostic.open_float, { desc = "Show diagnostic Error messages" })
 vim.keymap.set("n", "<leader>fx", vim.diagnostic.setloclist, { desc = "Open diagnostic Quick[F]i[X] list" })
