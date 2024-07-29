@@ -9,6 +9,9 @@ return {
 					require("telescope.themes").get_dropdown({}),
 				},
 			},
+			find_files = {
+				hidden = true
+			},
 		})
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[F]ind Files" })
