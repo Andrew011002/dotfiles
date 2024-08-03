@@ -9,8 +9,12 @@ return {
 					require("telescope.themes").get_dropdown({}),
 				},
 			},
-			find_files = {
-				hidden = true
+			file_ignore_patterns = {
+				"venv",
+				"node_modules",
+				"build",
+				"dist",
+				"yarn.lock",
 			},
 		})
 		local builtin = require("telescope.builtin")
