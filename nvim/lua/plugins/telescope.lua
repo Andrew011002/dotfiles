@@ -14,12 +14,15 @@ return {
 					hidden = true,
 				},
 			},
-			file_ignore_patterns = {
-				"venv",
-				"node_modules",
-				"build",
-				"dist",
-				"yarn.lock",
+			defaults = {
+				file_ignore_patterns = {
+					"^.git/",
+					"venv",
+					"node_modules",
+					"build",
+					"dist",
+					"yarn.lock",
+				},
 			},
 		})
 		local builtin = require("telescope.builtin")
